@@ -1,0 +1,13 @@
+<div *ngIf="feedData">
+    <h2>Your Yammer Feed</h2>
+    <ul>
+      <li *ngFor="let item of feedData.messages">
+        <!-- Display the feed items as needed -->
+        {{ item.body.plain }}
+      </li>
+    </ul>
+  </div>
+  <div *ngIf="!feedData">
+    <p>Loading Yammer feed...</p>
+  </div>
+  
