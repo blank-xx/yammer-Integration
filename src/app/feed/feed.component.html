@@ -1,13 +1,37 @@
-<div *ngIf="feedData">
-    <h2>Your Yammer Feed</h2>
-    <ul>
-      <li *ngFor="let item of feedData.messages">
-        <!-- Display the feed items as needed -->
-        {{ item.body.plain }}
-      </li>
-    </ul>
+<div class="body">
+  <div *ngIf="startRendering" class="yammer-feed-container">
+    <!-- Example Angular template -->
+    <div *ngFor="let item of finalfeed" class="yammer-feed-item">
+      <div class="privacy-type">Posted in All Company</div>
+      <div class="user-details">
+        <div>{{item.name}}</div>
+
+        <div>Seen by</div>
+      </div>
+      <div>{{ item.description }}</div>
+      <!-- <div *ngFor="let x of item.attachments">
+        <ng-container *ngIf="x.type === 'shared_message'">
+          <div>{{ x.body.plain }}</div>
+        </ng-container>
+
+        <ng-container *ngIf="getImage(x.id) | async as imageurl">
+          <img [src]="{imageurl}" alt="Yammer Image" />
+        </ng-container>
+
+
+      </div> 
+      <div class="footer">
+        <div class="actions">
+          <div>Like</div>
+          <div>Comment</div>
+          <div>Share</div>
+        </div>
+        <div class="actions">Liked by {{item.liked_by.count}}</div>
+      </div>
+    </div>-->
   </div>
-  <div *ngIf="!feedData">
+  <div *ngIf="!startRendering">
     <p>Loading Yammer feed...</p>
   </div>
-  
+</div>
+

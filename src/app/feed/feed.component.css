@@ -1,0 +1,93 @@
+/* Styling for the container holding the Yammer feed items */
+.yammer-feed-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    margin: 10px 10rem;
+    background-color: antiquewhite;
+  }
+  
+  /* Styling for each Yammer feed item */
+  .yammer-feed-item {
+    display: block;
+    align-items: center;
+    margin: 5rem;
+    background-color: #ebe7e7;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: max-content;
+  }
+  
+  /* Styling for user image */
+  .user-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Styling for user details */
+  .user-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Styling for user name */
+  .user-name {
+    font-weight: bold;
+  }
+  
+  /* Styling for timestamp */
+  .timestamp {
+    color: #888;
+    font-size: 12px;
+  }
+  
+  /* Styling for message */
+  .message {
+    margin-top: 5px;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Styling for loading message */
+  .loading-message {
+    text-align: center;
+    font-style: italic;
+    color: #888;
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .privacy-type{
+    color:#595959 !important ;
+    text-align: start;
+    margin-bottom: 10px;
+  }
+
+  .footer{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .actions{
+    display: flex;
+    color:#595959 !important ;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  .user-details{
+    display: flex;
+    justify-content: space-between;
+    text-align: start;
+    flex-direction: row;
+    margin-bottom: 10px;
+  }
