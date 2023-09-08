@@ -2,21 +2,23 @@
 .yammer-feed-container {
     display: flex;
     flex-direction: column;
+    flex-shrink: inherit;
     align-items: center;
     overflow-y: auto;
     margin: 10px 10rem;
-    background-color: antiquewhite;
+    background-color: rgb(243, 243, 243);
   }
   
   /* Styling for each Yammer feed item */
   .yammer-feed-item {
     display: block;
     align-items: center;
-    margin: 5rem;
-    background-color: #ebe7e7;
+    background-color: #ffffff;
     border-radius: 10px;
-    padding: 20px;
-    max-width: max-content;
+    margin: 2rem 0px;
+    width: 70%;
+    padding: 10px;
+    box-shadow: 0 5px 10px rgb(0 0 0 / 0.2);
   }
   
   /* Styling for user image */
@@ -24,51 +26,17 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    margin-right: 10px;
+    margin-right: 7px;
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  
-  /* Styling for user details */
-  .user-details {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  /* Styling for user name */
-  .user-name {
-    font-weight: bold;
   }
   
   /* Styling for timestamp */
   .timestamp {
     color: #888;
     font-size: 12px;
-  }
-  
-  /* Styling for message */
-  .message {
-    margin-top: 5px;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  /* Styling for loading message */
-  .loading-message {
-    text-align: center;
-    font-style: italic;
-    color: #888;
-    margin-top: 20px;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .privacy-type{
-    color:#595959 !important ;
-    text-align: start;
-    margin-bottom: 10px;
   }
 
   .footer{
@@ -77,17 +45,67 @@
     flex-direction: row;
   }
 
-  .actions{
-    display: flex;
-    color:#595959 !important ;
-    justify-content: space-between;
-    margin-top: 20px;
-  }
-
   .user-details{
     display: flex;
-    justify-content: space-between;
-    text-align: start;
     flex-direction: row;
     margin-bottom: 10px;
+    justify-content: space-evenly;
+  }
+
+  .image-container {
+    margin-top: 20px;
+    margin-left: 25px;
+    margin-bottom: 20px;
+  }
+
+  .images {
+    flex: 1 0 140px;
+    height: auto;
+    width: 625px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .footer-container{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 10px 10px 25px;
+  }
+
+  .user{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+  }
+  
+  .name{
+    font-size: x-large;
+    font-weight: bold;
+  }
+
+  .time{
+    margin-top: 7px;
+  }
+
+  .title{
+    font-weight:350;
+    font-size: large;
+    margin: 10px 35px 15px 25px;
+    color: black;
+  }
+
+  .seen{
+    margin-top: 20px;
+    color: #888;
+    font-size: 12px;
+  }
+  
+
+  .carousel-control-next{
+    margin-right: 20px;
   }

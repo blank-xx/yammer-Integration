@@ -1,37 +1,48 @@
-<div class="body">
+
   <div *ngIf="startRendering" class="yammer-feed-container">
-    <!-- Example Angular template -->
     <div *ngFor="let item of finalfeed" class="yammer-feed-item">
-      <div class="privacy-type">Posted in All Company</div>
-      <div class="user-details">
-        <div>{{item.name}}</div>
-
-        <div>Seen by</div>
-      </div>
-      <div>{{ item.description }}</div>
-      <!-- <div *ngFor="let x of item.attachments">
-        <ng-container *ngIf="x.type === 'shared_message'">
-          <div>{{ x.body.plain }}</div>
-        </ng-container>
-
-        <ng-container *ngIf="getImage(x.id) | async as imageurl">
-          <img [src]="{imageurl}" alt="Yammer Image" />
-        </ng-container>
-
-
-      </div> 
-      <div class="footer">
-        <div class="actions">
-          <div>Like</div>
-          <div>Comment</div>
-          <div>Share</div>
+      <div class="header">
+        <div class="user-details">
+          <img [src]="item.dp" alt="no image" class="user-image" />
+          <div class="user">
+            <div class="name">{{ item.name }}</div>
+            <div class="timestamp">{{ item.published_at }}</div>
+          </div>
         </div>
-        <div class="actions">Liked by {{item.liked_by.count}}</div>
+        <div class="seen">Liked by {{item.likes}}</div>
       </div>
-    </div>-->
-  </div>
-  <div *ngIf="!startRendering">
-    <p>Loading Yammer feed...</p>
-  </div>
-</div>
+      <div class="title">{{ item.description }}</div>
 
+      <div>
+        <ngb-carousel *ngIf="item.Images && item.Images.length > 0" class="image-container">
+          <ng-template ngbSlide *ngFor="let image of item.Images">
+            <img [src]="image.images" alt="no image" class="images" />
+          </ng-template>
+        </ngb-carousel>
+      </div>
+    </div>
+  </div>
+
+      <!-- <div class="footer-container">
+        <div class="likes">
+          <span>Like </span>
+          <span>Comment </span>
+          <span>Share </span>
+        </div>
+        <div>
+          <span>Liked by {{ item.liked_by }}</span>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="!startRendering">
+      <p>Loading Yammer feed...</p>
+    </div>
+  </div> -->
+    <!-- <ngb-carousel *ngIf="image">
+	<ng-template ngbSlide>
+		<div *ngFor="let image of item.Images" class="picsum-img-wrapper">
+			<img [src]="image.images" alt="Random first slide" />
+		</div>
+	</ng-template>
+</ngb-carousel> -->
+  

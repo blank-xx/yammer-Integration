@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { YammerLoginComponent } from './login/login.component';
 import { YammerAuthCallbackComponent } from './callback/callback.component';
 import { YammerFeedComponent } from './feed/feed.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { YammerFeedComponent } from './feed/feed.component';
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
